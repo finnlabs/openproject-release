@@ -3,6 +3,10 @@ require 'dispatcher'
 
 Dispatcher.to_prepare do
   require_dependency 'finn_release/finn_release'
+
+  if FinnRelease::FinnRelease.release_time.present?
+    ENV["RAILS_ASSET_ID"] = FinnRelease::FinnRelease.release_time.to_i.to_s(16)
+  end
 end
 
 Redmine::Plugin.register :chiliproject_finn_release do
