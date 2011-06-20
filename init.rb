@@ -14,5 +14,5 @@ Redmine::Plugin.register :chiliproject_finn_release do
   author 'Stephan Eckardt @ finnlabs'
   author_url 'http://www.finn.de'
   description 'This plugin makes the Finn release version information available to Chiliproject'
-  version '0.1'
+  version '0.2.0'
 end
