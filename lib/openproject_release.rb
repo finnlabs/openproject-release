@@ -1,19 +1,21 @@
-module FinnRelease
-  module FinnRelease
+require 'openproject_release/engine'
+
+module OpenprojectRelease
+  module OpenprojectRelease
     def self.version
-      @version ||= read_file('../../../RELEASE_VERSION')
+      @version ||= read_file('../../RELEASE_VERSION')
     end
     
     def self.release_date
       @date ||= begin
-        s = read_file('../../../RELEASE_DATE')
+        s = read_file('../../RELEASE_DATE')
         Date.parse(s) if s
       end
     end
 
     def self.release_time
       @time ||= begin
-        s = read_file('../../../RELEASE_DATE')
+        s = read_file('../../RELEASE_DATE')
         Time.parse(s) if s
       end
     end
