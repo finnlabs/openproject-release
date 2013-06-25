@@ -1,0 +1,3 @@
+en:
+  op_release_last_update: "last update %{released_at}"
+  op_release_current_version: "version %{version}"
