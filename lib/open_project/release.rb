@@ -3,13 +3,19 @@ module OpenProject
     require 'open_project/release/engine'
 
     def self.version
-      @version ||= File.read("#{Rails.root.join('config').to_s}/RELEASE_VERSION")
+      begin
+        @version ||= File.read("#{Rails.root.join('config').to_s}/RELEASE_VERSION")
+      rescue
+        "no release version"
+      end
     end
 
     def self.release_date
       @date ||= begin
         s = File.read("#{Rails.root.join('config').to_s}/RELEASE_DATE")
         Date.parse(s) if s
+      rescue
+        "no release date"
       end
     end
 
@@ -17,6 +23,8 @@ module OpenProject
       @time ||= begin
         s = File.read("#{Rails.root.join('config').to_s}/RELEASE_DATE")
         Time.parse(s) if s
+      rescue
+        "no release time"
       end
     end
 
