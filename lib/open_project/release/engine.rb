@@ -10,6 +10,7 @@ module OpenProject::Release
     config.to_prepare do
       require 'redmine/plugin'
       require 'open_project/footer'
+      require 'open_project/release/hooks'
 
       spec = Bundler.environment.specs['openproject-release'][0]
 

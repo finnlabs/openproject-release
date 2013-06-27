@@ -1,0 +1,4 @@
+<%= content_tag :h3, I18n.t('op_release_admin_info_head') %>
+<%= I18n.t('op_release_current_version', :version => OpenProject::Release.version) %>
+<br />
+<%= I18n.t('op_release_last_update', :released_at => OpenProject::Release.release_date) %>
