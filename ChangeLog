@@ -1,9 +1,0 @@
-2013-06-27  Christian Ratz <c.ratz@finn.de>
-
-	* Plugins now adds release info to footer and admin/info
-	* adds core version dependency
-
-2013-03-01  Hagen Schink <h.schink@finn.de>
-
-	* Swtiched to version 0.2.5
-	* Rails 3.2-ified plug-in
