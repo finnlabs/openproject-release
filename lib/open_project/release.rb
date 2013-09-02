@@ -6,7 +6,7 @@ module OpenProject
       begin
         @version ||= File.read("#{Rails.root.join('config').to_s}/RELEASE_VERSION")
       rescue
-        "no release version"
+        @version = "no release version"
       end
     end
 
@@ -15,7 +15,7 @@ module OpenProject
         s = File.read("#{Rails.root.join('config').to_s}/RELEASE_DATE")
         Date.parse(s) if s
       rescue
-        "no release date"
+        @date = "no release date"
       end
     end
 
@@ -24,13 +24,8 @@ module OpenProject
         s = File.read("#{Rails.root.join('config').to_s}/RELEASE_DATE")
         Time.parse(s) if s
       rescue
-        "no release time"
+        @date = "no release time"
       end
-    end
-
-    private
-    def self.read_file( filename )
-      File.read( File.expand_path(File.dirname(__FILE__) + filename ) ) rescue nil
     end
   end
 end
