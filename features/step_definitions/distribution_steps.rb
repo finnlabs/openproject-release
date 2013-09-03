@@ -1,4 +1,5 @@
 Then /^I should see the distribution information on the information page$/ do
+  OpenProject::Release.clear_cache
   version_file = Rails.root.to_s + "/config/RELEASE_VERSION"
   File.open(version_file, 'w') {|f| f.write("3.0.0") }
   page.should have_content('Information')

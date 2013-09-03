@@ -27,5 +27,10 @@ module OpenProject
         @date = "no release time"
       end
     end
+
+    # Used for testing
+    def self.clear_cache
+      @version = @date = @time = nil
+    end
   end
 end
