@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0.pre3
+
+* Cache missing information, to prevent inadvertent performance issues
+
 ## 0.3.0.pre2
 
 * fixed gemspec
