@@ -1,5 +1,5 @@
 module OpenProject
   module Release
-    VERSION = "0.3.0.pre3"
+    VERSION = "0.3.0"
   end
 end

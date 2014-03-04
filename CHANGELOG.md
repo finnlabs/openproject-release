@@ -1,5 +1,7 @@
 # Changelog
 
+
+## 0.3.0
 ## 0.3.0.pre3
 
 * Cache missing information, to prevent inadvertent performance issues
