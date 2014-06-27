@@ -26,7 +26,7 @@ module OpenProject::Release
           description spec.description
           version OpenProject::Release::VERSION
 
-          requires_openproject ">= 3.0.0pre5"
+          requires_openproject ">= 4.0.0"
 
           OpenProject::Footer.add_content('release_version', Proc.new {I18n.t('op_release_current_version', :version => OpenProject::Release.version) if User.current.admin?})
           OpenProject::Footer.add_content('release_date', Proc.new {I18n.t('op_release_last_update', :released_at => OpenProject::Release.release_date)})
