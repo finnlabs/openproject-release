@@ -3,10 +3,6 @@ module OpenProject::Release
     engine_name :openproject_release
     config.autoload_paths += Dir["#{config.root}/lib/"]
 
-    initializer 'release.register_test_paths' do |app|
-      app.config.plugins_to_test_paths << self.root
-    end
-
     config.to_prepare do
       require 'redmine/plugin'
       require 'open_project/footer'
