@@ -1,0 +1,4 @@
+en:
+  op_release_last_update: "Last update %{released_at}"
+  op_release_current_version: "Version %{version}"
+  op_release_admin_info_head: "Distribution"

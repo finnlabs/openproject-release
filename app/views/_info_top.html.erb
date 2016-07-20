@@ -1,0 +1,8 @@
+<dt class="attributes-key-value--key"><%= l(:op_release_admin_info_head) %></dt>
+<dd class="attributes-key-value--value-container">
+  <div class="attributes-key-value--value -text">
+    <span><%= I18n.t('op_release_current_version', :version => OpenProject::Release.version) %></span>
+    <br>
+    <span><%= I18n.t('op_release_last_update', :released_at => OpenProject::Release.release_date) %></span>
+  </div>
+</dd>
